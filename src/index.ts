@@ -40,7 +40,7 @@ export class KlipWeb3Provider extends SafeEventEmitter implements Web3Provider {
     public bappName = '';
     public rpcUrl = '';
     public ethersProvider: any;
-    public ethersEnabled = false;
+    public ethersEnabled = true;
     public addresses: string[] = [];
     private readonly _subscriptionManager = new SubscriptionManager(this);
 

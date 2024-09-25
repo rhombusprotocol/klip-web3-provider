@@ -42,11 +42,11 @@ function QRCodeDisplay(props: QRCodeDisplayProps) {
     };
 
     return (
-        <div>
+        <div className="klip-qrcode__wrapper">
             <p id={KLIP_CTA_TEXT_ID} className="klip-qrcode__text">
                 {props.text.scan_qrcode_with_wallet}
             </p>
-            <div dangerouslySetInnerHTML={{ __html: svg }}></div>
+            <div className="klip-qrcode__image-wrapper" dangerouslySetInnerHTML={{ __html: svg }}></div>
             <div className="klip-modal__footer">
                 <a onClick={copyToClipboard}>{props.text.copy_to_clipboard}</a>
             </div>

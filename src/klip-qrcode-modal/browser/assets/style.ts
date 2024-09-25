@@ -55,16 +55,11 @@ export const KLIP_STYLE_SHEET = `:root {
     margin-left: 5px;
   }
   .klip-modal__close__wrapper {
-    position: absolute;
-    top: 0px;
-    right: 0px;
     z-index: 10000;
-    background: white;
-    border-radius: 26px;
-    padding: 6px;
+    padding: 2px;
     box-sizing: border-box;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
   }
   .klip-modal__close__icon {
@@ -78,14 +73,21 @@ export const KLIP_STYLE_SHEET = `:root {
   }
   .klip-modal__close__line1 {
     position: absolute;
+    border: 1px solid black;
     width: 100%;
-    border: 1px solid rgb(48, 52, 59);
   }
   .klip-modal__close__line2 {
     position: absolute;
+    border: 1px solid black;
     width: 100%;
-    border: 1px solid rgb(48, 52, 59);
     transform: rotate(90deg);
+  }
+
+  .klip-qrcode_dark .klip-modal__close__line1 {
+    border: 1px solid white;
+  }
+  .klip-qrcode_dark .klip-modal__close__line2 {
+    border: 1px solid white;
   }
   .klip-qrcode__base {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -102,18 +104,18 @@ export const KLIP_STYLE_SHEET = `:root {
     box-sizing: border-box;
   }
   .klip-qrcode__text {
-    color: rgba(60, 66, 82, 0.6);
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 21px;
+    font-weight: 700;
     letter-spacing: 0;
     line-height: 1.1875em;
     margin: 10px 0 20px 0;
     text-align: center;
     width: 100%;
+    max-width: 201px;
   }
   @media only screen and (max-width: 768px) {
     .klip-qrcode__text {
-      font-size: 4vw;
+      font-size: 21px;
     }
   }
   @media only screen and (max-width: 320px) {
@@ -122,7 +124,7 @@ export const KLIP_STYLE_SHEET = `:root {
     }
   }
   .klip-qrcode__image {
-    width: calc(100% - 30px);
+    width: 100%;
     box-sizing: border-box;
     cursor: none;
     margin: 0 auto;
@@ -179,8 +181,7 @@ export const KLIP_STYLE_SHEET = `:root {
   }
   .klip-modal__base {
     -webkit-font-smoothing: antialiased;
-    background: #ffffff;
-    border-radius: 24px;
+    border-radius: 5px;
     box-shadow: 0 10px 50px 5px rgba(0, 0, 0, 0.4);
     font-family: ui-rounded, "SF Pro Rounded", "SF Pro Text", medium-content-sans-serif-font,
       -apple-system, BlinkMacSystemFont, ui-sans-serif, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
@@ -195,8 +196,14 @@ export const KLIP_STYLE_SHEET = `:root {
     overflow: visible;
     transform: translateY(-50%);
     top: 50%;
-    max-width: 500px;
+    max-width: 420px;
     margin: auto;
+    background: #ffffff;
+    color: #303549;
+  }
+  .klip-qrcode_dark .klip-modal__base{
+    background: #292E41;
+    color: #ffffff;
   }
   @media only screen and (max-width: 320px) {
     .klip-modal__base {
@@ -210,11 +217,10 @@ export const KLIP_STYLE_SHEET = `:root {
   .klip-modal__header {
     align-items: center;
     display: flex;
-    height: 26px;
-    left: 0;
-    justify-content: space-between;
-    position: absolute;
-    top: -42px;
+    padding-top: 14px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
     width: 100%;
   }
   .klip-modal__base .wc-logo {
@@ -450,5 +456,18 @@ export const KLIP_STYLE_SHEET = `:root {
     width: calc(100% - 16px);
     margin: 0;
     margin-bottom: 8px;
+  }
+  .klip-qrcode__image-wrapper {
+    background: #F7F7F9;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 10px;
+  }
+    .klip-qrcode__wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   `;

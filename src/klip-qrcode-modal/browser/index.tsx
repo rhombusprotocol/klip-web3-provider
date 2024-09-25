@@ -11,7 +11,7 @@ import { TextMap } from './types';
 const en: TextMap = {
     choose_preferred_wallet: 'Choose your preferred wallet',
     connect_mobile_wallet: 'Connect to Mobile Wallet',
-    scan_qrcode_with_wallet: 'Scan QR code with a Klip wallet',
+    scan_qrcode_with_wallet: 'Please Scan the QR to connect wallet',
     connect: 'Connect',
     qrcode: 'QR Code',
     mobile: 'Mobile',
