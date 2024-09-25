@@ -437,7 +437,7 @@ export class KlipWeb3Provider extends SafeEventEmitter implements Web3Provider {
             const bappName = this.bappName;
             const to = params[0]['to'];
             const data = params[0]['data'];
-            const amount = Number(params[0]['value'] ?? 0).toString();
+            const amount = BigInt(params[0]['value'] ?? 0).toString();
             const res = await axios
                 .post(prepareUrl, {
                     bapp: {
